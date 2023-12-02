@@ -6,7 +6,7 @@ def part1(games, max_red=12, max_green=13, max_blue=14):
     valid_games = 0
     for index, game in enumerate(games):
         game_valid = True
-        for game_round in game.replace(f"Game {index+1}: ", '').split(";"):
+        for game_round in game.replace(f"Game {index + 1}: ", '').split(";"):
             for cube in game_round.split(","):
                 cube = cube.strip()
                 if cube.find("red") != -1 and int(cube.rstrip(" red")) > max_red:
@@ -27,7 +27,7 @@ def part2(games):
         minimum_red = 0
         minimum_green = 0
         minimum_blue = 0
-        for game_round in game.replace(f"Game {index+1}: ", '').split(";"):
+        for game_round in game.replace(f"Game {index + 1}: ", '').split(";"):
             for cube in game_round.split(","):
                 cube = cube.strip()
                 if cube.find("red") != -1 and int(cube.rstrip(" red")) > minimum_red:
@@ -56,5 +56,3 @@ def main(input_filepath):
 
 if __name__ == '__main__':
     main("input.txt")
-
-
