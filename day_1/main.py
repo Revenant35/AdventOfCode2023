@@ -67,4 +67,4 @@ def main(input_filepath):
 
 
 if __name__ == '__main__':
-    main("./input.txt")
+    main("input.txt")
